@@ -1,0 +1,109 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.facebook.widget.ProfilePictureView
+            android:id="@+id/userProfilePicture"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            facebook:preset_size="large" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:text="Nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Email"
+            android:id="@+id/userEmail"
+            android:textColor="#44619d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:text="Location"
+            android:id="@+id/userLocation"
+            android:textColor="#44619d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:text="Gender"
+            android:id="@+id/userGender"
+            android:textColor="#44619d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:text="Birth"
+            android:id="@+id/userDateOfBirth"
+            android:textColor="#44619d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:text="Relationship"
+            android:id="@+id/userRelationship"
+            android:textColor="#44619d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+           <Button
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:background="#ee1b25"
+                 android:textStyle="bold"
+                 android:layout_alignParentBottom="true"
+                 android:text="Logout"
+                 android:textColor="#FFFFFF"
+                 android:id="@+id/logoutButton" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

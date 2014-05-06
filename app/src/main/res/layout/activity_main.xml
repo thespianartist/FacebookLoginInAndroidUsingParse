@@ -1,0 +1,57 @@
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EFEFEF"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#44619d"
+        android:paddingTop="30dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:textAlignment="center"
+        android:text="Welcome to Facebook Login"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#44619d"
+        android:textAlignment="center"
+        android:text="Powered by Parse"/>
+
+    <ImageView
+        android:src="@drawable/logogdg"
+        android:layout_marginTop="25dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/imageView"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#44619d"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:text="Login with Facebook"
+            android:textColor="#FFFFFF"
+            android:id="@+id/button_loggin" />
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
