@@ -85,8 +85,6 @@
             android:layout_gravity="center"
             android:textSize="16sp" />
 
-
-
     </LinearLayout>
 
     <Button
