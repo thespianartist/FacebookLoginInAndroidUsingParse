@@ -85,7 +85,21 @@
             android:layout_gravity="center"
             android:textSize="16sp" />
 
+
+
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:background="@drawable/layout_bg"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:text="Share"
+        android:textColor="#FFFFFF"
+        android:id="@+id/ShareButton" />
 
     <RelativeLayout
 

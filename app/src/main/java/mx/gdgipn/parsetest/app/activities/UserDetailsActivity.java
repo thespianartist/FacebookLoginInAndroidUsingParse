@@ -16,6 +16,7 @@ import com.facebook.Request;
 import com.facebook.Response;
 import com.facebook.Session;
 import com.facebook.model.GraphUser;
+import com.facebook.widget.FacebookDialog;
 import com.facebook.widget.ProfilePictureView;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
@@ -36,6 +37,7 @@ public class UserDetailsActivity extends ActionBarActivity {
     private TextView userRelationshipView;
     private TextView userEmailView;
     private Button logoutButton;
+    private Button shareButton;
     private ActionBar actionbar;
 
 
@@ -69,6 +71,23 @@ public class UserDetailsActivity extends ActionBarActivity {
             makeMeRequest();
         }
 
+        shareButton = (Button) findViewById(R.id.ShareButton);
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                share();
+            }
+        });
+
+
+
+    }
+
+    private void share() {
+        FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
+                .setLink("https://developers.facebook.com/android")
+                .build();
+        shareDialog.present();
     }
 
     @Override
@@ -78,6 +97,7 @@ public class UserDetailsActivity extends ActionBarActivity {
         ParseUser currentUser = ParseUser.getCurrentUser();
         if (currentUser != null) {
             updateViewsWithProfileInfo();
+
         } else {
 
             Intent intent = new Intent(this, MainActivity.class)
@@ -88,6 +108,7 @@ public class UserDetailsActivity extends ActionBarActivity {
     }
 
     private void makeMeRequest() {
+
         Request request = Request.newMeRequest(ParseFacebookUtils.getSession(),
                 new Request.GraphUserCallback() {
                     @Override
@@ -209,6 +230,9 @@ public class UserDetailsActivity extends ActionBarActivity {
 
         }
     }
+
+
+
 
     private void onLogoutButtonClicked() {
         ParseUser.logOut();

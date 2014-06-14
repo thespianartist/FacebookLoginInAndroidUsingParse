@@ -17,10 +17,12 @@ public class ParseTestApplication extends Application {
         super.onCreate();
 
         //Parse Credenciales
-        Parse.initialize(this, "YOUR APPLICATION ID", "YOUR CLIENT KEY");
+        Parse.initialize(this, "9o8CcazbN3OJyH9lAmbLpH4OQIuTVgneYEDx4SUX", "H19iumuYqrSjGC0ZLAsjQZ36M5dkG9qttvBKA4Jo");
 
         //El App ID de Facebook, se modifica en values -> strings ->
         ParseFacebookUtils.initialize(getString(R.string.app_id));
+
+
 
     }
 

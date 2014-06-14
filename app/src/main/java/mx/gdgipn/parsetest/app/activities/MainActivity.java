@@ -13,7 +13,9 @@ import android.widget.Button;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
+import com.parse.ParseInstallation;
 import com.parse.ParseUser;
+import com.parse.PushService;
 
 import java.util.Arrays;
 import java.util.List;
@@ -26,6 +28,7 @@ public class MainActivity extends ActionBarActivity {
 
     private Dialog progressDialog;
     private Button loginButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +46,16 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+
+
         ParseUser currentUser = ParseUser.getCurrentUser();
         if ((currentUser != null) && ParseFacebookUtils.isLinked(currentUser)) {
             startActivity(new Intent(getApplication(), UserDetailsActivity.class));
         }
+
+        PushService.setDefaultPushCallback(this, MainActivity.class);
+        ParseInstallation.getCurrentInstallation().saveInBackground();
+
 
     }
 
